@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="ticket" id="ticket">
-        <h2>Comprobante</h2>
+        <h2>Ticket</h2>
         <p>Producto 1 - $10.00</p>
         <p>Producto 2 - $20.00</p>
         <p>Producto 2 - $30.00</p>
