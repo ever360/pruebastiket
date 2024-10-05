@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket de Venta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .ticket {
+            width: 280px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #000;
+            font-size: 14px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="ticket" id="ticket">
+        <h2>Comprobante</h2>
+        <p>Producto 1 - $10.00</p>
+        <p>Producto 2 - $20.00</p>
+        <p>Total: $30.00</p>
+    </div>
+
+    <button id="share-btn">Compartir en WhatsApp</button>
+
+    <script>
+        document.getElementById('share-btn').addEventListener('click', function() {
+            html2canvas(document.getElementById('ticket')).then(function(canvas) {
+                canvas.toBlob(function(blob) {
+                    var file = new File([blob], "comprobante.png", { type: "image/png" });
+                    var data = new FormData();
+                    data.append('file', file);
+
+                    // Crear un enlace con el archivo adjunto
+                    var url = 'https://api.whatsapp.com/send?text=Compartiendo comprobante';
+                    window.open(url, '_blank');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
