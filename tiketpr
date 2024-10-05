@@ -238,8 +238,8 @@ img#impresoraButton {
 
         // Obtener los valores de los parámetros
         var nro_boleta = params.has('boleta') ? params.get('boleta') : "---";
-        var nombre_cliente = params.has('cliente') ? params.get('cliente') : "==3145842929==";
-        var telefono = params.has('telefono') ? params.get('telefono') : "==Cliente==";
+        var nombre_cliente = params.has('cliente') ? params.get('cliente') : "==ever==";
+        var telefono = params.has('telefono') ? params.get('telefono') : "==3145842929==";
         var codigo_pais = params.has('codigo_pais') ? params.get('codigo_pais') : "==Cliente==";
         var fecha = params.has('fecha') ? params.get('fecha') : "dd/mm/aaaa hh:mm:ss";
         var fecha_entrega = params.has('fecha_entrega') ? params.get('fecha_entrega') : "hh:mm:ss";
